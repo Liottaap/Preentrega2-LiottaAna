@@ -1,11 +1,13 @@
+import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
-
+import ItemCount from "./components/ItemCount";
 
 function App (){
     return(  
         <div className="flex flex-col h-50 align-middle">
             <NavBar/>
-            <h1 className="text-7xl mx-auto mt-20 text-[#3e4943]">Oro Verde</h1>
+            <ItemListContainer greeting="¡BIENVENIDOS!"/>
+            <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada: ',quantity)}  />
         </div>
     )
 }
