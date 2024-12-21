@@ -3,7 +3,7 @@ import Layout from "./pages/Layout";
 import Inicio from "./pages/Inicio";
 import Productos from "./pages/Productos";
 import Error from "./pages/Error";
-import DetalleProducto from "./pages/DetalleProducto";
+import DetalleProducto from "./pages/detalleProducto";
 import Faqs from "./pages/Faqs";
 /* import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
