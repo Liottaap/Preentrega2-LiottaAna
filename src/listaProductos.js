@@ -1,94 +1,54 @@
 const listaProductos = [
-    {
-      id: 1,
-      nombre: "Reloj Inteligente Sport",
-      imagen: "https://images.unsplash.com/photo-1516214104703-44b5c6d8f15d", // Reloj inteligente
-      precio: 150,
-    },
-    {
-      id: 2,
-      nombre: "Audífonos Bluetooth Over-Ear",
-      imagen: "https://images.unsplash.com/photo-1511415512635-6c64e9e0a799", // Audífonos
-      precio: 75,
-    },
-    {
-      id: 3,
-      nombre: "Computadora Portátil Pro",
-      imagen: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8", // Laptop
-      precio: 1200,
-    },
-    {
-      id: 4,
-      nombre: "Vapeador Compacto",
-      imagen: "https://images.unsplash.com/photo-1594007651580-23fc64b87e2d", // Vapeador
-      precio: 50,
-    },
-    {
-      id: 5,
-      nombre: "Televisor 4K Ultra HD",
-      imagen: "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9", // Televisor
-      precio: 800,
-    },
-    {
-      id: 6,
-      nombre: "Tablet Multimedia",
-      imagen: "https://images.unsplash.com/photo-1556656793-08538906a9f8", // Tablet
-      precio: 300,
-    },
-    {
-      id: 7,
-      nombre: "Cámara Reflex Digital",
-      imagen: "https://images.unsplash.com/photo-1495427033174-6aac9781b8b1", // Cámara
-      precio: 900,
-    },
-    {
-      id: 8,
-      nombre: "Altavoz Bluetooth Portátil",
-      imagen: "https://images.unsplash.com/photo-1617308616384-7cc3a7eeecf6", // Altavoz
-      precio: 60,
-    },
-    {
-      id: 9,
-      nombre: "Consola de Videojuegos NextGen",
-      imagen: "https://images.unsplash.com/photo-1593642634557-e2b36b9c06b7", // Consola de videojuegos
-      precio: 500,
-    },
-    {
-      id: 10,
-      nombre: "Smartphone Avanzado",
-      imagen: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde", // Smartphone
-      precio: 1000,
-    },
-    {
-      id: 11,
-      nombre: "Monitor Curvo UltraWide",
-      imagen: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8", // Monitor
-      precio: 400,
-    },
-    {
-      id: 12,
-      nombre: "Mouse Inalámbrico Ergonómico",
-      imagen: "https://images.unsplash.com/photo-1519638399535-1b036603ac77", // Mouse
-      precio: 30,
-    },
-    {
-      id: 13,
-      nombre: "Teclado Mecánico RGB",
-      imagen: "https://images.unsplash.com/photo-1546435770-a3e426bf472b", // Teclado
-      precio: 100,
-    },
-    {
-      id: 14,
-      nombre: "Dron con Cámara HD",
-      imagen: "https://images.unsplash.com/photo-1499988925656-c9dd72fbfd3c", // Dron
-      precio: 600,
-    },
-    {
-      id: 15,
-      nombre: "Smart Home Assistant",
-      imagen: "https://images.unsplash.com/photo-1517059224940-d4af9eec41ee", // Asistente inteligente
-      precio: 200,
-    },
-  ];
-  
-  export default listaProductos;
+  {
+    "id": 1,
+    "nombre": "Computadora Portátil Pro",
+    "img": "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9", 
+    "precio": 800000,
+  },
+
+  {
+    "id": 2,
+    "nombre": "Televisor 4K Ultra HD LG",
+    "img": "https://www.lg.com/ar/images/televisores/md07585734/gallery/D-01.jpg",
+    "precio": 450000,
+  },
+  {
+    "id": 3,
+    "nombre": "Tablet Multimedia",
+    "img": "https://tienda.personal.com.ar/images/720/webp/Galaxy_Tab_S6_Lite_L30_min_5f74da6d2a.png",
+    "precio": 200000,
+  },
+ 
+  {
+    "id": 4,
+    "nombre": "Monitor Curvo UltraWide",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLZZBGPqQ_JN1khIiIkFXC78MopoEelHd5rQ&s",
+    "precio": 650000,
+  },
+  {
+    "id": 5,
+    "nombre": "Mouse Inalámbrico Ergonómico",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_715951-MLA79562234800_102024-O.webp",
+    "precio": 80000,
+  },
+  {
+    "id": 6,
+    "nombre": "Auriculares super chetos",
+    "img": "https://images.unsplash.com/photo-1546435770-a3e426bf472b",
+    "precio": 130000,
+  },
+  {
+    "id": 7,
+    "nombre": "Play5 + Joystick + Fifa 23",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_757020-MLU71094570314_082023-O.webp",
+    "precio": 1000000,
+  },
+  {
+    "id": 8,
+    "nombre": "Teclado inalambrico RGB Gamer bluetooth 5.0",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_985880-MLU74180200923_012024-O.webp",
+    "precio": 180000,
+  },
+
+];
+export default listaProductos;

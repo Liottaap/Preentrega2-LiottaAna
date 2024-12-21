@@ -1,9 +1,10 @@
 import { BrowserRouter , Routes , Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Inicio from "./pages/Inicio";
-import Catalogo from "./pages/catalogo"
+import Productos from "./pages/Productos";
 import Error from "./pages/Error";
-import Producto from "./pages/detailProduct";
+import DetalleProducto from "./pages/DetalleProducto";
+import Faqs from "./pages/Faqs";
 /* import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
 import ItemCount from "./components/ItemCount";
@@ -24,10 +25,9 @@ import ItemCount from "./components/ItemCount";
             <Routes>
                 <Route path="/" element={<Layout/>}>
                     <Route index element={<Inicio/>} />
-                    <Route path="catalogo" element={<Catalogo/>}>
-                        <Route path="productos/:productoId" element={<Producto/>}/>
-                    </Route>
-                    <Route path="Faqs"/>
+                    <Route path="productos" element={<Productos/>}/>
+                    <Route path="productos/:productoId" element={<DetalleProducto/>}/>
+                    <Route path="faqs" element={<Faqs/>} />
                     <Route path="*" element={<Error/>}/>
                 </Route>
             </Routes>
