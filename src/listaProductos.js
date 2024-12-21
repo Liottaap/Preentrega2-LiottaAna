@@ -1,4 +1,4 @@
-const detailProduct = [
+const listaProductos = [
     {
       id: 1,
       nombre: "Reloj Inteligente Sport",
@@ -91,4 +91,4 @@ const detailProduct = [
     },
   ];
   
-  export default productos;
+  export default listaProductos;
