@@ -4,7 +4,7 @@ import Layout from "./pages/Layout";
 import Inicio from "./pages/Inicio";
 import Catalogo from "./pages/Catalogo";
 import Error from "./pages/Error";
-import DetalleProducto from "./pages/detalleProducto";
+import DetalleProducto from "./pages/DetalleProducto";
 import Faqs from "./pages/Faqs";
 
  function App(){
