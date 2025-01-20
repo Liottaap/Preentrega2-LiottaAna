@@ -16,14 +16,11 @@ function ItemCount ({ stock, initial }){
                 <h3 className="text-xl">{quantity}</h3>
                 <button onClick={increment} className="text-xl w-auto h-auto bg-primary pl-2 pr-2 rounded-sm text-whitesmoke">+</button>
             </div>
-            <div>
-            <button
-                    className="text-2xl border-2 pl-5 pr-5 pt-2 pb-2 rounded-sm hover:bg-primary hover:text-whitesmoke"
-                    onClick={() => addToCart(quantity)}
-                >
+
+            <button className="text-2xl border-2 pl-5 pr-5 pt-2 pb-2 rounded-sm hover:bg-primary hover:text-whitesmoke"
+            onClick={() => addToCart(quantity)}>
                     Agregar al carrito
-                </button>
-            </div>
+            </button>
         </div>
     )
 }

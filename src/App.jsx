@@ -1,11 +1,11 @@
 import { BrowserRouter , Routes , Route } from "react-router-dom";
 import { CartProvider } from "./components/CartContext";
 import Layout from "./pages/Layout";
-import Inicio from "./pages/Inicio";
-import Catalogo from "./pages/Catalogo";
 import Error from "./pages/Error";
-import DetalleProducto from "./pages/detalleProducto";
 import Faqs from "./pages/Faqs";
+import ItemListContainer from "./components/ItemListContainer";
+
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
  function App(){
     return(
@@ -13,9 +13,9 @@ import Faqs from "./pages/Faqs";
             <CartProvider>
                 <Routes>
                     <Route path="/" element={<Layout/>}>
-                        <Route index element={<Inicio/>} />
-                        <Route path="catalogo" element={<Catalogo/>}/>
-                        <Route path="catalogo/:productoId" element={<DetalleProducto/>}/>
+                        <Route index element={<ItemListContainer/>} />
+                        <Route path="category/:categoryId" element={<ItemListContainer/>}/>
+                        <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
                         <Route path="faqs" element={<Faqs/>} />
                         <Route path="*" element={<Error/>}/>
                     </Route>

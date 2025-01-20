@@ -30,7 +30,7 @@ function Faqs () {
                     <p>Puedes realizar tu pedido a través de nuestra página web, redes sociales o por WhatsApp. Aceptamos múltiples métodos de pago, como transferencias bancarias, tarjetas de crédito y débito.</p>
                 </details>
             </div>
-            <Link to="/" className="mb-10 ml-5 w-14 text-primary text-xl hover:border-b-2" >Volver</Link>
+            <Link to="/" className="mb-10 ml-5 w-14 text-primary text-xl" >Volver</Link>
         </div>
         
     )
