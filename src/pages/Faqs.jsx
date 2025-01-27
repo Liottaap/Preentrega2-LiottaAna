@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import MapLink from "../components/map/Map";
+
 
 function Faqs () {
     return(
