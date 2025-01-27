@@ -1,34 +1,50 @@
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
+import { useContext, useState } from "react";
+import { CartContext } from "../context/CartContext";
+import { Returnbutton } from "./Icons/Icons";
 
-const ItemDetail = ({id, nombre, img, categoria, desc, items, precio}) => {
 
-    //hacer que la desc se vea en formato lista
-/*     const descripcionLista = items
-    .split("\n")
-    .filter(line => line.trim().startsWith(">"))
-    .map(line => line.replace(">", "").trim()); */
+const ItemDetail = ({ id, nombre, img, categoria, desc, items, precio, stock }) => {
+    const [quantityAdded, setQuantityAdded] = useState(0);
+    const { addItem } = useContext(CartContext);
+
+    
+    const handleOnAdd = (quantity) => {
+        setQuantityAdded(quantity);
+        const item = { id, nombre, precio };
+
+        addItem(item, quantity);
+    };
 
     return (
-        <div className="flex flex-col justify-between bg-300-red  mt-20 ml-5 mr-5">
-            <article className="flex justify-around w-100 h-auto gap-10">
-                <img src={img} alt={nombre} className=" shadow-xl w-2/4 h-auto object-contain "/>
-                <div className="flex flex-col gap-10 text-center w-2/4">
-                    <h2 className="text-4xl mt-20 w-full">{nombre}</h2>
-                    <p>{categoria}</p>
-                    <h3 className="text-3xl "> $ {precio}</h3>
+        <article className="flex  w-full  gap-10 ">
+            <section className="flex flex-col w-1/2 gap-10 mt-20 object-contain">
+                <img src={img} alt={nombre} className="shadow-xl h-4/5 " />
+                <Link to="/" className="mb-10 ml-5 w-14 text-primary text-xl items-end">Volver</Link>
+            </section>
 
-                    <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada: ',quantity)}  />
-                    <div className="flex flex-col gap-5 text-left p-5">
-                        <p className="text-xl">{desc}</p>
-                        <p className="text-xl">{items}</p>
-                    </div>
-                </div>
-            </article>
-            
-            <Link to="/" className="mb-10 ml-5 w-14 text-primary text-xl" >Volver</Link>
-        </div>
-    )
-}
+            <section className="text-center w-1/2 gap-7 flex flex-col">
+                <h2 className="text-4xl mt-20 w-full">{nombre}</h2>
+                <p>Categoría: {categoria}</p>
+                <h3 className="text-3xl"> $ {precio}</h3>
+                <section>
+                    {quantityAdded > 0 ? (
+                        <div className="flex gap-5 justify-center items-center">
+                            <Returnbutton/>
+                            <Link to="/cart" className="w-auto h-auto text-center text-2xl bg-whitesmoke bg-primary text-primary px-4 py-2 rounded-md hover:bg-primary  hover:text-whitesmoke transition-all"> Ir al carrito </Link>
+                        </div>
+
+                    ) : (
+                        <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                    )}
+                </section>
+
+                <p className="text-xl text-left p-5">{desc}</p>
+                <p className="text-xl text-left p-5">{items}</p>
+            </section>
+        </article>
+    );
+};
 
 export default ItemDetail;

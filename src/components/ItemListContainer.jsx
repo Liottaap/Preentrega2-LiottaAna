@@ -1,33 +1,40 @@
-
 import { useState, useEffect } from "react";
-import { getProducts, getProductsByCategory } from '../listaProductos'
-import { useParams } from "react-router-dom";
 import ItemList from './ItemList'
+import { useParams } from "react-router-dom";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../config/firebase";
 
 
 function ItemListContainer({greeting}) {
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
 
     const { categoryId } = useParams();
 
     useEffect(() => {
-        const asynFunc = categoryId ? getProductsByCategory : getProducts;
+        setLoading(true)
+        const collectionRef = categoryId
+        ? query(collection(db,'Items'),where('categoria', '==', categoryId))
+        : collection(db,'Items')
 
-
-        asynFunc(categoryId)
-            .then((resp) =>{
-                setProducts(resp);
+        getDocs(collectionRef)
+        .then(response => {
+            const productsAdapted = response.docs.map(doc => {
+                const data = doc.data ()
+                return {id: doc.id, ...data}
             })
-            .catch(error => {console.error(error);
-            })
-    }, [categoryId])
+            setProducts(productsAdapted)
+        })
+        .catch(error => {console.log(error)})
+        .finally(() => {setLoading(false)})
+    })
 
 
     return (
-        <div className="h-screen">
-            <h1 className="text-5xl text-center w-full  pt-10 ">{greeting}</h1>
+        <main className="m-10 ">
+            <h1 className="text-5xl text-center w-full  pt-10">{greeting}</h1>
             <ItemList products={products}/>
-        </div>
+        </main>
 
     );
 }
