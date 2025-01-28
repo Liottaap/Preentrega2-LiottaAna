@@ -8,7 +8,7 @@ const Cart = () => {
     console.log(cart)
     if(totalQuantity === 0) {
         return(
-            <div className="flex flex-col items-center gap-10 h-screen">
+            <div className="flex flex-col items-center gap-10">
                 <h1 className="text-3xl text-center mt-20">No hay items en el carrito</h1>
                 <Link to="/" className="w-14 text-primary text-xl" >Volver</Link>
             </div>
@@ -20,8 +20,8 @@ const Cart = () => {
             {cart.map(p => <CartItem key={p.id}{...p}/>)}
 
             <div className="flex mb-20">
-            <h3 className="text-2xl">Total: ${total}</h3>
-            <button onClick={() => clearCart()} className="ml-auto">Limpiar carrito</button>
+                <h3 className="text-2xl">Total: ${total}</h3>
+                <button onClick={() => clearCart()} className="ml-auto">Limpiar carrito</button>
             </div>
             
             <Link to="/checkout" className="w-full h-auto ml-auto mr-auto text-center text-2xl bg-whitesmoke border-primary text-primary px-4 py-2 rounded-md hover:bg-primary hover:text-whitesmoke hover:w-52 hover:rounded-2xl transition-all">Checkout</Link>

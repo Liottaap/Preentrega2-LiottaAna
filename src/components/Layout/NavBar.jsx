@@ -6,7 +6,7 @@ import CartWidget from '../CartWidget';
 function NavBar(){
     
     return(
-        <nav className="flex w-full h-40 justify-between pl-20 pr-20 items-center bg-cover bg-center text-whitesmoke text-xl"  style={{ backgroundImage: `url(${fondoNavbar})` }}>
+        <nav className="flex w-full h-40 justify-between pl-20 pr-20 mb-20 items-center bg-cover bg-center text-whitesmoke text-2xl"  style={{ backgroundImage: `url(${fondoNavbar})` }}>
             <section className="flex gap-5">
                 <Link to="/">Inicio</Link>
                 <Link to="/faqs">Faqs</Link>
