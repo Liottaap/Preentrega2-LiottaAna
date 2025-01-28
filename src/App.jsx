@@ -10,21 +10,24 @@ import Checkout from "./components/Checkout";
 
 function App(){
     return(
-        <BrowserRouter>
-            <CartProvider>
-                <Routes>
-                    <Route path="/" element={<Layout/>}>
-                        <Route index element={<ItemListContainer greeting={"¡Bienvenidos a Circuito-X!"}/>} />
-                        <Route path="category/:categoryId" element={<ItemListContainer/>}/>
-                        <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
-                        <Route path="faqs" element={<Faqs/>} />
-                        <Route path="/cart" element={<Cart/>}/>
-                        <Route path="/checkout" element={<Checkout/>}/>
-                        <Route path="*" element={<Error/>}/>
-                    </Route>
-                </Routes>
-            </CartProvider>
-        </BrowserRouter>
+        <div className="bg-mainBg bg-cover bg-center  min-h-screen ">
+            <BrowserRouter>
+                <CartProvider>
+                    <Routes>
+                        <Route path="/" element={<Layout/>}>
+                            <Route index element={<ItemListContainer greeting={"¡Bienvenidos a Circuito-X!"}/>} />
+                            <Route path="category/:categoryId" element={<ItemListContainer/>}/>
+                            <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
+                            <Route path="faqs" element={<Faqs/>} />
+                            <Route path="/cart" element={<Cart/>}/>
+                            <Route path="/checkout" element={<Checkout/>}/>
+                            <Route path="*" element={<Error/>}/>
+                        </Route>
+                    </Routes>
+                </CartProvider>
+            </BrowserRouter>
+        </div>
+
     )
 }
 

@@ -67,7 +67,7 @@ const Checkout = () => {
     }
     if(orderId) {
         return (
-            <main className="flex flex-col gap-20">
+            <main className="flex flex-col gap-20 ">
                 <h1 className="text-4xl flex justify-center mt-20">El id de su orden es: {orderId}</h1>
                 <Link to="/" className="mt-10 ml-5 w-14 text-primary text-xl" >Volver</Link>
             </main>

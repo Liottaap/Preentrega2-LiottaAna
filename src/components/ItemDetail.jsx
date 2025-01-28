@@ -18,7 +18,7 @@ const ItemDetail = ({ id, nombre, img, categoria, desc, items, precio, stock }) 
     };
 
     return (
-        <article className="flex  w-full  gap-10 ">
+        <article className="flex  w-full  gap-10">
             <section className="flex flex-col w-1/2 gap-10 mt-20 object-contain">
                 <img src={img} alt={nombre} className="shadow-xl h-4/5 " />
                 <Link to="/" className="mb-10 ml-5 w-14 text-primary text-xl items-end">Volver</Link>

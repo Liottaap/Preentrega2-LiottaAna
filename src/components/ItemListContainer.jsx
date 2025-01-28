@@ -31,7 +31,7 @@ function ItemListContainer({greeting}) {
 
 
     return (
-        <main>
+        <main className=" pb-20 pr-5 pl-5">
             <h1 className="text-5xl text-center w-full  pt-10">{greeting}</h1>
             <ItemList products={products}/>
         </main>

@@ -3,8 +3,8 @@ import Ubication from "../../assets/icons8-ubicación.gif"
 
 const MapLink = () => {
     return(
-        <main className="flex flex-col items-center justify-center">
-            <div className="flex gap-10 justify-center items-center p-4">
+        <main className="flex flex-col items-center">
+            <div className="flex gap-10 justify-center items-center p-4 mt-10">
                 <h2 className="text-2xl">Dónde encontrarnos</h2>
                 <img src={Ubication} alt="Ubicación" className="w-10 h-10" />
             </div>

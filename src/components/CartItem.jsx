@@ -8,7 +8,7 @@ const CartItem = ({id, precio, nombre, quantity }) => {
     const masDeUno = quantity > 1;
 
     return(
-        <main className="flex justify-between items-center border-b border-primary py-4">
+        <main className="flex justify-between items-center border-b border-primary py-4 ">
             <div className="">
                     <h2 className="text-xl font-semibold">{nombre}</h2>
                     <p>Precio unitario: ${precio}</p>

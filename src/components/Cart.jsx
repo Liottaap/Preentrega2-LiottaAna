@@ -8,7 +8,7 @@ const Cart = () => {
     console.log(cart)
     if(totalQuantity === 0) {
         return(
-            <div className="flex flex-col items-center gap-10">
+            <div className="flex flex-col items-center gap-10 ">
                 <h1 className="text-3xl text-center mt-20">No hay items en el carrito</h1>
                 <Link to="/" className="w-14 text-primary text-xl" >Volver</Link>
             </div>

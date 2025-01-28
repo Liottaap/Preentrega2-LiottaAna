@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 function Footer(){
     
     return(
-        <footer className="mt-20 flex justify-between items-center bg-primary p-4">
+        <footer className=" flex justify-between items-center bg-primary p-4">
             <p className="text-xl text-whitesmoke pl-10">© Página hecha por Ana Liotta</p>
             <picture className="flex pr-10 gap-5">
                 <Link to="#"><img src={Instagram} alt="Instagram" className="w-12 h-12"/></Link>
