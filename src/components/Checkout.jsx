@@ -58,7 +58,7 @@ const Checkout = () => {
     }
     if (loading) {
         return(
-            <main className="flex flex-col gap-20">
+            <main className="h-screen flex flex-col gap-20">
                <h1 className="text-4xl text-center h-screen mt-20">Se está generando su orden ... </h1>
             </main>
         )
@@ -67,7 +67,7 @@ const Checkout = () => {
     }
     if(orderId) {
         return (
-            <main className="flex flex-col gap-20">
+            <main className="h-screen flex flex-col gap-20">
                 <h1 className="text-4xl flex justify-center mt-20">El id de su orden es: {orderId}</h1>
                 <Link to="/" className="mt-10 ml-5 w-14 text-primary text-xl" >Volver</Link>
             </main>
@@ -76,7 +76,7 @@ const Checkout = () => {
     }
 
     return (
-        <div className="flex  flex-col gap-5">
+        <div className=" flex flex-col gap-5">
             <h1 className="text-3xl ml-auto mr-auto pt-10 pb-10">Checkout</h1>
             <CheckoutForm onConfirm={createOrder} />
         </div>
