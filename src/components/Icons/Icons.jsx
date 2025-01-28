@@ -12,6 +12,6 @@ export const Returnbutton = () => {
 
 export const Ubication = () => {
     return(
-        <img src={UbicationImg}></img>
+        <img src={UbicationImg} alt='Ubicación del local'></img>
     )
 }
